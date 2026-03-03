@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/homepage.css" />
+    <script src="js/search.js"></script>
+    <script src="js/testdb.js"></script>
+    
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+  <header>
+    <div class="icon">
+      <img src="img/Icon2.png" alt="icon" width="120" />
+    </div>
+    <div class="toggle-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="HomePage.html?home=home" class="Home">Home</a></li>
+        <li><a href="HomePage.html?home=manga" class="Manga">Manga</a></li>
+        <li><a href="HomePage.html?home=novel" class="Novel">Novel</a></li>
+        <li><a href="Contact.html" class="Contact">Contact</a></li>
+        <li><a href="HomePage.html?home=more" class="More">More</a></li>
+        <li class="search-bar-container">
+          <table class="search-bar-element">
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Search"
+                />
+              </td>
+              <td>
+                <button class="material-symbols-outlined">search</button>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li><a href="Login.html" class="button-sign-up">Sign up</a></li>
+        <li><a href="Login.html" class="button-login">Login</a></li>
+        <li><a href="Account.html"  class="avatar" ><img style="position: relative;right: 0px;width: 100px;height: 100px;" src="img/avatar.jpg" alt=""></a></li>
+      </ul>
+    </nav>
+  </header>
+      <mainc>
+    <div class="circle">   </div>
+    <div style="border-radius: 20px; background-color: white;" class="container border-2 border border-black mt-5 mb-5 ">
+        <div style="border-radius: 20px;" class="typecontainer row flex-row justify-content-around p-5">
+            <div class="Allt col-4"><div class="imaget" style=" background-image: url('https://lh3.google.com/u/0/d/1cyj-gHjdGXG7BQIenI2S7jD6VQHUke4T=k');"> <div class="black">ALL</div> </div></div>
+            <div class="Mangat col-4"><div class="imaget" style="  background-image: url('https://lh3.google.com/u/0/d/1R9ORDWeBJlhOsCG5u6r-AELsNn6vPgBj=k');"> <div class="black">Manga</div> </div></div>
+            <div class="Novelt col-4"><div class="imaget" style="  background-image: url('https://lh3.google.com/u/0/d/1s6PeAAVIdeWDNHlh1M3Y-nsgyjycTFAb=k');"> <div class="black">Novel</div> </div></div>
+        </div>
+     <div class="divbtn" style="text-align: left;"><button class="theloaibtn" style="border-radius: 20px;margin: 10px;">SUBMIT</button></div>
+    </div>
+    </mainc>
+    <footer>
+        <div class="footerContainer">
+          <div class="Icon-socialNetWork">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="footer-nav">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Our Team</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footerBottom">
+          <p>
+            CopyRight &copy;2024;Designed by <span class="Designer">Team7</span>
+          </p>
+        </div>
+      </footer>
+</body>
+<style>
+    .image{
+        width: 300px;height: 500px;
+       background-position: center right;
+       background-attachment: fixed;
+       background-size: cover; 
+       background-repeat: no-repeat;
+       border-radius: 5%;
+       
+    }
+    .black{
+        position: relative;
+        width: 300px;height: 500px; border-radius: 5%;
+        font-size: 80px;
+        color: White;
+        text-align: center;
+        align-content: center;
+        font-family: 'Bauhaus 93', sans-serif;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .black::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            transition: none;
+            order: 3;
+        }
+
+        .black:hover::before {
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                transform: translateY(0);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            100% {
+                transform: translateY(10%);
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+
+        .growth {
+            transform-origin: top;
+            animation: growth 1.0 forwards;
+            animation-timing-function: ease-in;
+            animation-duration: 1s;
+        }
+        @keyframes growth {
+        0% {
+        transform: scaleY(1.0);
+            }
+        100% {
+        transform: scaleY(2.0);
+        }
+    }
+    .childgrowth {
+            transform-origin: top;
+            animation: childgrowth 1.0 forwards;
+            animation-timing-function: ease-out;
+            animation-duration: 1s;
+        }
+        @keyframes childgrowth {
+        0% {
+        transform: scaleY(1.0);
+            }
+        100% {
+        transform: scaleY(0.0);
+        }
+    }
+
+    /* body {
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden; 
+    position: relative; 
+    } */
+  .circle1 {
+    background-size: cover;
+    background-image: url('https://cdn.buymeacoffee.com/uploads/rewards/2023-06-18/1/112528_thumbnail.png@1200w_0e.png');
+    width: 90px;
+    height: 120px;
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: zoomInAndOut 5s forwards; /* Sử dụng keyframes để tạo hiệu ứng vòng */
+    z-index: -1;
+    }
+
+    @keyframes zoomInAndOut {
+    0% {
+        transform: translate(-50%, -50%) scale(1); /* Trạng thái ban đầu */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(15); /* Trở về kích thước ban đầu */
+        }
+    }
+    .typeclass{
+        margin-right: 8%;
+        margin-left: 8%;
+        margin-top: 20px;
+        background-size: cover;
+        font-size: 30px;
+        color: white;
+        font-family: 'Bauhaus 93', sans-serif;
+        width: 200px;
+        height: 100px;
+        border-radius: 20px;
+    }
+    .typeclass:hover{
+        transform: scale(1.2);
+    }
+    .typeco {
+         display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            padding: 20px;
+    }
+    /* Styles for small screens */
+@media (max-width: 768px) {
+  .image {
+    width: 100%;
+    height: 300px;
+  }
+  .black {
+    font-size: 40px;
+  }
+  .typeclass {
+    width: 150px;
+    height: 80px;
+    font-size: 20px;
+  }
+  .typeco {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .black {
+    width: 200px;
+    height: 100px;
+  }
+  .imaget {
+    width: 200px; /* Width for mobile screens */
+    height: 100px; /* Height for mobile screens */
+  }
+  .Allt  {
+    left: 50px;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 70px;
+  }
+  .Mangat {
+    margin-bottom: 30px;
+    width: 200px;
+    height: 100px;
+  }
+  .Novelt {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+  .image {
+    width: 300px;
+    height: 500px;
+  }
+  .black {
+    font-size: 80px;
+  }
+  .typeclass {
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+  }
+  .typeco {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+}
+
+    </style>
+    <script>
+        var category;
+        var divbtn =document.querySelector('.divbtn')
+        divbtn.style.visibility = 'hidden'
+        var elements = document.querySelector('.typecontainer').children;
+        var type = document.querySelector('.typecontainer');
+        var parent = document.querySelector('.container')
+        var array = Array.from(elements);
+        array.forEach(element => {
+            
+            console.log(element.className)
+          
+            console.log(category)
+            if(element.classList.contains('col-4')) {element.addEventListener("click", function(){choosetype(element)})}
+            else {}
+        });
+        function choosetype(child)
+        {
+            var footer = document.getElementsByTagName('footer')[0];
+        footer.style.position = 'absolute';footer.style.visibility= 'hidden'
+            category= child.className.replace("col-4","")
+            array.forEach(element => {
+            element.classList.add('childgrowth')})
+            child.addEventListener('animationend', function(event) {
+            parent.classList.add('growth')
+            var e = child.querySelector('.imaget'); // Lấy phần tử con có lớp 'image'
+        var backgroundImageURL = e.style.backgroundImage; // Lấy giá trị của thuộc tính 'backgroundImage'
+        // Xử lý chuỗi để chỉ lấy phần 
+        parent.addEventListener('animationend', function(event) {
+           
+        var circle = document.querySelector('.circle');
+        circle.style.backgroundImage = backgroundImageURL;
+        circle.classList.add('circle1')
+        circle.addEventListener('animationend', function(event) { generateType();divbtn.style.visibility = 'visible';})
+                })
+            })
+            
+        }
+        var choose =[]
+        function generateType()
+        {
+            type.innerHTML='';
+             var names = [
+               { url: 'https://lh3.google.com/u/0/d/1qq3xcbNEaL2OLSdZAn7VfcoVGTweLko5=k', text: 'Action' },
+               { url: 'https://lh3.google.com/u/0/d/1b3MBlIFQllMOSh0EPdqaJWbupwHISz-N=k', text: 'Adventure' },
+               { url: 'https://lh3.google.com/u/0/d/1nPOgvYPF6ptc8AC4f8wsfVW0pT11LBfJ=k', text: 'Comedy' },
+               { url: 'https://lh3.google.com/u/0/d/1TlrXsO4kvd3cX5F3kBYpk1S1tbNadQVP=k', text: 'Fantasy' },
+               { url: 'https://lh3.google.com/u/0/d/17AvNHLcP9LARIaC0TnB0xkpGEF2M5_wY=k', text: 'Mystery' },
+               { url: 'https://lh3.google.com/u/0/d/1_OOfLpRSzWDkrS4Ys6gWRsvpEihrqFW5=k', text: 'Slice of life' },
+               { url: 'https://lh3.google.com/u/0/d/1XCLnXJdHpZfJhgcJ2YPgyQo5R_emeH2y=k', text: 'School life' },
+               { url: 'https://lh3.google.com/u/0/d/13-64-fbasGiY-wN_rLCMELNWG2poUZOw=k', text: 'Horror' },
+               { url: 'https://lh3.google.com/u/0/d/1vP2_-ofhGtvFl9oT0IelPDPiwsWNMMLL=k', text: 'Romace' }
+                ];
+            // var names = ["Action", "Adventure", "Comedy", "Mystery", "Romance", "Slice of life", "School life", "Fantasy", "Horror"];
+            for(var i =0;i<names.length;i++){
+            (function(i){
+            var blacklayout = document.createElement('div')
+            var bg = document.createElement('div');
+            blacklayout.innerHTML=names[i].text
+            bg.classList.add("typeclass");
+            bg.style.backgroundImage= "url('" + names[i].url + "')";
+            bg.appendChild(blacklayout)
+            bg.style.backgroundAttachment="fixed"
+            bg.style.backgroundSize="cover"
+            bg.style.backgroundPosition="center"
+            blacklayout.style.backgroundColor="rgba(0, 0, 0, 0.5)"
+            blacklayout.style.width="200px";blacklayout.style.height="100px";blacklayout.style.textAlign="center";blacklayout.style.alignContent="center";blacklayout.style.borderRadius='20px'
+            bg.addEventListener("click", function(){
+            if(bg.childElementCount>0) {bg.removeChild(blacklayout);bg.style.transform = 'scale(1.2)';choose.push(names[i].text);}
+            else {bg.appendChild(blacklayout);bg.style.transform='scale(1.0)';choose.pop(names[i].text);}
+        })
+            
+            type.className='typeco'
+            type.appendChild(bg); 
+            })(i)
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+    var button = document.querySelector('.theloaibtn');
+    
+  // Gán sự kiện onclick cho nút
+    if(button){
+    button.addEventListener('click', function(event) {
+    window.location.href="testsearch.html?datachoose="+choose+"&category="+category;
+    });
+            }
+    });
+    </script>
+</style>
+</html>

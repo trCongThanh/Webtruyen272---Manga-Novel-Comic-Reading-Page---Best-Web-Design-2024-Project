@@ -1,0 +1,843 @@
+
+/* Base styles */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Media query for screens with a maximum width of 600px */
+.icon img {
+  width: 50px;
+  height: 85px;
+}
+
+.mangaHomepage {
+  width: 1125px;
+  border-radius: 3%;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 10px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+.premangaHomepage {
+  width: 1125px;
+  border-radius: 3%;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 10px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+.novelHomepage {
+  width: 1125px;
+  border-radius: 3%;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 10px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+.prenovelHomepage {
+  width: 1125px;
+  border-radius: 3%;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 10px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+header {
+  height: 100px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+ul li a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  display: inline-block;
+}
+li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: rgb(47, 238, 255);
+  transition: all 0.5s;
+}
+li a:hover::after {
+  width: 100%;
+}
+.search-bar-container {
+  margin: auto;
+  position: relative;
+  border: 2px solid;
+  padding: 0 10px;
+  border-radius: 50px;
+}
+.search-bar-element {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+#search {
+  border: none;
+  border-radius: 50px;
+  padding: 0px 5px;
+}
+#search:focus {
+  outline: none;
+}
+.content-introduce-container {
+  color: white;
+  margin-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: 30px;
+  display: flex;
+  background-image: url(../img/Introduce3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.content-introduce-left {
+  width: 40%;
+  padding: 20px;
+}
+.Learn-more {
+  text-decoration: none;
+  padding: 15px 20px;
+  outline: none;
+  border: 4px solid;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.87);
+  border-color: black;
+  color: white;
+}
+.button-sign-up {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: white;
+}
+.button-login {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: white;
+}
+.Home {
+  padding: 15px 15px;
+}
+.Manga {
+  padding: 15px 15px;
+}
+.Novel {
+  padding: 15px 15px;
+}
+.Contact {
+  padding: 15px 15px;
+}
+.More {
+  padding: 15px 15px;
+}
+.Manga-category {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 32px;
+}
+.box-container-manga {
+  margin-top: 0%;
+  display: flex;
+  justify-content: space-around;
+}
+.box {
+  border: 1px solid;
+  padding: 100px;
+  padding-bottom: 200px;
+}
+.box-container-content {
+  display: flex;
+  justify-content: space-around;
+}
+.search-bar-container:hover {
+  color: rgb(47, 238, 255);
+  transition: all ease 0.7s;
+}
+.box-container-content a:hover{
+  color: red;
+  transition: all ease 0.7s;
+}
+#Doraemon {
+  background-image: url(../img/Doraemon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Dragon-Ball {
+  background-image: url(../img/DragonBall.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Naruto {
+  background-image: url(../img/Naruto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#One-Piece {
+  background-image: url(../img/Onepiece.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-container-content a {
+  text-decoration: none;
+  color: black;
+}
+.material-symbols-outlined {
+  border: none;
+  background-color: white;
+}
+.box-container-manga-2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+#Bleach {
+  background-image: url(../img/Bleach.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Fairy-Tail {
+  background-image: url(../img/FairyTail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#One-punch-man {
+  background-image: url(../img/OnePunchMan.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Atack-on-titan {
+  background-image: url(../img/AtackOnTitan.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Novel-category {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 32px;
+}
+.box-container-novel {
+  display: flex;
+  justify-content: space-around;
+}
+#Harry-porter {
+  background-image: url(../img/HarryPorter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#the-witcher {
+  background-image: url(../img/TheWitcher.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Sherlock-Homes {
+  background-image: url(../img/SherlockHolmes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Lord-of-the-ring {
+  background-image: url(../img/TheLordOfTheRing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-container-novel2 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+#Rich-dad-poor-dad {
+  background-image: url(../img/RichDadPoorDad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#the-good-father {
+  background-image: url(../img/TheGodfather.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#the-Davinci-code {
+  background-image: url(../img/TheDavinciCode.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#les-misérables {
+  background-image: url(../img/LesMiserables.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.Icon-socialNetWork {
+  display: flex;
+  justify-content: center;
+}
+.Icon-socialNetWork a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.Icon-socialNetWork a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+.Icon-socialNetWork a:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+.Icon-socialNetWork a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+.footer-nav {
+  margin: 30px o;
+}
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+}
+.footer-nav ul li a {
+  color: white;
+  margin: 20px;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footer-nav ul li a:hover {
+  transition: 1;
+}
+.footerBottom {
+  background-color: blue;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p {
+  color: white;
+}
+.Designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+#news-update {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  border-bottom: 1px solid;
+}
+.news-update-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.news-update-heading span {
+  color: red;
+}
+.news-update-heading h3 {
+  font-size: 2.4rem;
+  color: black;
+  font-weight: 600;
+}
+.news-update-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+.news-update-box {
+  width: 350px;
+  background-color: white;
+  border: 1px solid;
+  margin: 20px;
+}
+.news-update-img {
+  width: 100%;
+  height: auto;
+}
+.news-update-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.news-update-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.news-update-text span {
+  color: red;
+  font-size: 0.9rem;
+}
+.news-update-text .news-update-tittle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: black;
+}
+.news-update-text .news-update-tittle:hover {
+  color: red;
+  transition: all ease 0.3s;
+}
+.news-update-text p {
+  color: #9b9b9b;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 20px 0px;
+}
+.news-update-text a {
+  color: black;
+}
+.news-update-text a:hover {
+  color: red;
+  transition: all ease 0.3s;
+}
+.text{
+  font-family: cursive;
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+}
+.type
+{
+  animation: divgrow;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+
+  position: relative;
+  background-color: white;
+  width:400px;
+  height: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content: space-around;
+}
+.hinhanh
+{
+  margin-top: 10px;
+  position: relative;
+  align-content: end;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 150px;
+  height: 100px;
+}
+.hinhanh::after
+{
+  content: "";
+  display: inline;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 0;
+}
+.hinhanh>*{
+  z-index: 10;
+  position: relative;
+}
+/* Áp dụng lớp màn đen cho toàn bộ màn hình */
+body.animation::before {
+content: "";
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ 50% */
+z-index: 9999; /* Đảm bảo lớp này nằm trên các phần tử khác */
+}
+
+/* Loại bỏ lớp màn đen đối với phần tử <nav> */
+header {
+position: relative;
+z-index: 10000; /* Đảm bảo phần tử này nằm trên lớp màn đen */
+}
+/* Màu nền sáng cho khung input */
+ header.animation :is(.icon)
+ {
+      animation-name: slideright;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateX(-200px);
+ }
+ @keyframes slideright
+  {
+      from{transform: translateX(0);}
+      to { transform: translateX(200px);}
+  }
+  header.reverse :is(.icon)
+ {
+      animation-name: slideright1;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateX(-200px);
+ }
+ @keyframes slideright1
+  {
+      from{transform: translateX(200px);}
+      to { transform: translateX(0px);}
+  }
+  nav.animation :is(.Home, .Manga, .Novel, .More, .Contact)
+  {
+      animation-name: slideleft;
+      animation-duration: 4s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateX(-200px);
+  }
+  @keyframes slideleft
+  {
+      from{transform: translateX(0);}
+      to { transform: translateX(-800px);}
+  }
+  nav.reverse :is(.Home, .Manga, .Novel, .More, .Contact)
+  {
+      animation-name: slideleft1;
+      animation-duration: 2.4s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateX(-200px);
+  }
+  @keyframes slideleft1
+  {
+      from{transform: translateX(-700px);}
+      to { transform: translateX(0px);}
+  }
+  nav.animation :is(.button-sign-up, .button-login)
+  {
+      animation-name: sliderup;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateY(100px);
+  }
+  @keyframes sliderup
+  {
+      from{transform: translateY(0);}
+      to { transform: translateY(-500px);}
+  }
+  nav.reverse :is(.button-sign-up, .button-login)
+  {
+      animation-name: sliderup1;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateY(100px);
+  }
+  @keyframes sliderup1
+  {
+      from{transform: translateY(-500px);}
+      to { transform: translateY(0px);}
+  }
+  nav.animation :is(.material-symbols-outlined)
+  {
+      animation: slider;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateX(0px);
+  }
+  @keyframes slider
+  {
+      from{transform: translateX(-20px);}
+      to { transform: translateX(200px);}
+  }
+  nav.reverse :is(.material-symbols-outlined)
+  {
+      animation: slider1;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      transform:  translateX(-10px);
+  }
+  @keyframes slider1
+  {
+      from{transform: translateX(200px);}
+      to { transform: translateX(-10px);}
+  }
+  nav.animation :is(.search-bar-container){
+      width: 100px;
+      transition: width 0.4s ease;
+      animation-name: grow;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      width: 230px;
+      transform:  translateX(-100px);
+  }
+  @keyframes grow
+  {
+      from{transform: translateX(0px);}
+      to { transform: translateX(-200px);}
+      100%{width: 500px;}
+  }
+  nav.reverse :is(.search-bar-container){
+      width: 100px;
+      transition: width 0.4s ease;
+      animation-name: grow1;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-fill-mode: both;
+      width: 500px;
+      transform:  translateX(-100px);
+  }
+  @keyframes grow1
+  {
+      from{transform: translateX(-200px);}
+      to { transform: translateX(0px);}
+      100%{width: 300px;}
+  }
+  @keyframes divgrow
+  {
+      0%{width: 400px; height: 0px;}
+      100%{width: 400px; height: 400px;}
+  }
+  .divgrow {
+      animation: divgrow 1s forwards; /* forwards ensures the final state persists after animation */
+  }
+  .hoverdiv:hover {
+      transform: scale(1.2); /* Phóng to 1.2 lần */
+  }
+.novelHomepage{display: grid;} 
+.mangaHomepage {display: grid;}
+@media only screen and (max-width: 768px) {
+  .novelHomepage, .mangaHomepage, .premangaHomepage, .prenovelHomepage {
+    width: 90%; /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(2, 1fr); /* Change the number of columns */
+    gap: 20px; /* Adjust the gap between grid items */
+    padding: 10px; /* Adjust the padding as needed */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .novelHomepage, .mangaHomepage, .premangaHomepage, .prenovelHomepage {
+    grid-template-columns: repeat(1, 1fr); /* Change the number of columns */
+    padding: 5px; /* Adjust the padding as needed */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .icon img {
+    width: 80px;
+  }
+  nav {
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .search-bar-container {
+    display: none;
+  }
+
+  .button-sign-up, .button-login {
+    display: none;
+  }
+
+  /* Toggle menu button */
+  .toggle-menu {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  nav.responsive ul {
+    display: flex;
+  }
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .search-bar-element {
+    width: 80%;
+  }
+
+  .search-bar-element input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: transparent;
+  }
+
+  .search-bar-element button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .content-introduce-left{
+    width: 300px;
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+  header {
+    padding: 20px;
+  }
+
+  .icon img {
+    width: 120px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  .toggle-menu {
+    display: none;
+  }
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .search-bar-element {
+    width: auto;
+  }
+
+  .search-bar-element input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: transparent;
+  }
+
+  .search-bar-element button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+}
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Icon-socialNetWork a {
+    margin: 0 10px;
+  }
+  
+}

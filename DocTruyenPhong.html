@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/homepage.css" />
+    <script src="js/search.js"></script>
+    <script src="js/testdb.js"></script>
+    <script src="js/homepage.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+        <title>
+            Đọc Truyện Tranh Online- 
+        </title>
+        <script src="js/testdb.js"></script>
+      <link rel="stylesheet" href="css/doctruyen.css">
+       
+    </head>
+    <body>
+      <header>
+        <div class="icon">
+          <img src="img/Icon2.png" alt="icon" width="120" />
+        </div>
+        <div class="toggle-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="HomePage.html?home=home" class="Home">Home</a></li>
+            <li><a href="HomePage.html?home=manga" class="Manga">Manga</a></li>
+            <li><a href="HomePage.html?home=novel" class="Novel">Novel</a></li>
+            <li><a href="Contact.html" class="Contact">Contact</a></li>
+            <li><a href="HomePage.html?home=more" class="More">More</a></li>
+            <li class="search-bar-container">
+              <table class="search-bar-element">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="search"
+                      id="search"
+                      placeholder="Search"
+                    />
+                  </td>
+                  <td>
+                    <button class="material-symbols-outlined">search</button>
+                  </td>
+                </tr>
+              </table>
+            </li>
+            <li><a href="Login.html" class="button-sign-up">Sign up</a></li>
+            <li><a href="Login.html" class="button-login">Login</a></li>
+            <li><a href="Account.html"  class="avatar" ><img style="position: relative;right: 0px;width: 100px;height: 100px;" src="img/avatar.jpg" alt=""></a></li>
+          </ul>
+        </nav>
+      </header>
+          <div class="menubar1">
+            <br>
+            <a id= "Home"href="#Home"><i class="fa fa-fw fa-home"></i></a>
+            <a id= "Chapters" href="#Chapters" onclick="goToViewTruyen()"><i class="fa fa-fw fa-bars"></i></a>
+            <button class="back-button"><i class="fa fa-arrow-left"></i></button>
+            <select id="Chapter" ></select>
+            <button class="next-button" ><i class="fa fa-arrow-right"></i></button> 
+            <!-- <select id="CheDo" style="padding: 10px; font-size: 14px; width: 180px;background-color: rgba(3, 133, 255, 0.91);border:none;color:white;">
+              <option value="Thẳng" onclick="showThang()">Trang đọc chuẩn</option>
+              <option value="Lướt" onclick="showLuot()">Trang Lướt</option>
+            </select> -->
+            <button type="button" id="ButtonFavor"><i class="fa fa-heart"></i> Theo Dõi</button>
+          
+            <h2 id="tentruyen" >Manga Name - Chapter </h2>
+          </div>
+                   <!-- Trang truyện -->
+
+                  <div id="TrangChuan" >
+                    <ul id="TrangList" ></ul>
+                  </div>
+
+                  <!-- <div id="TrangLuot" style="display:flex;flex-direction: row;">
+                    <button class="back-button" style="padding: 50px  50px;margin-left: 50px;" onclick="previousPage()"><i class="fa fa-arrow-left"></i></button>      
+                    <div id="ảnhLuot" style="margin-left: 130px;border: 1px solid black;margin-right: 100px;"></div>
+                    <button class="next-button" style="padding: 50px  50px;margin-right:50px;" onclick="nextPage()"><i class="fa fa-arrow-right"></i></button> 
+                  </div> -->
+                  
+                  <div class="menubar2">
+                    <br>
+                    <a id="Home" href="#Home"><i class="fa fa-fw fa-home"></i></a>
+                    <a id="Chapters" href="#Chapters" onclick="goToViewTruyen()"><i class="fa fa-fw fa-bars"></i></a>
+                    <button class="back-button"><i class="fa fa-arrow-left"></i></button>
+                    <select id="Chapter"></select>
+                    <button class="next-button" ><i class="fa fa-arrow-right"></i></button> 
+                    <!-- <select id="CheDo" style="padding: 10px; font-size: 14px; width: 180px;background-color: rgba(3, 133, 255, 0.91);border:none;color:white;">
+                      <option value="Thẳng" onclick="showThang()">Trang đọc chuẩn</option>
+                      <option value="Lướt" onclick="showLuot()">Trang Lướt</option>
+                    </select> -->
+                    <button type="button" id="ButtonFavor"><i class="fa fa-heart"></i> Theo Dõi</button>
+                  </div>
+                    <footer>
+                      <div class="footerContainer">
+                        <div class="Icon-socialNetWork">
+                          <a href=""><i style="background-color: white;" class="fa-brands fa-facebook"></i></a>
+                          <a href=""><i style="background-color: white;" class="fa-brands fa-instagram"></i></a>
+                          <a href=""><i style="background-color: white;" class="fa-brands fa-twitter"></i></a>
+                          <a href=""><i style="background-color: white;" class="fa-brands fa-google-plus"></i></a>
+                          <a href=""><i style="background-color: white;" class="fa-brands fa-youtube"></i></a>
+                        </div>
+                        <div class="footer-nav">
+                          <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">News</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">Our Team</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="footerBottom">
+                        <p>
+                          CopyRight &copy;2024;Designed by <span class="Designer">Team7</span>
+                        </p>
+                      </div>
+                    </footer>  
+      
+    </body>
+     <script>
+      var currchap;
+      var currnumber;
+      const params = new URLSearchParams(window.location.search);
+      const dataUrl = params.get('data1');
+      const dataChap = params.get('data2');currchap=dataChap
+      const dataname = params.get('data3');
+      const datanumberChap = params.get('data4'); //số lượng chap đổ vào var chapter
+      console.log(dataChap);
+      listall(dataUrl,dataChap)
+      var ten = document.querySelector("#tentruyen");
+      ten.textContent=dataname;
+      document.getElementById('Chapter').addEventListener('change', function() {
+      const selectedValue = this.value;
+      let str = selectedValue;
+    let splitStr = str.match(/([a-zA-Z]+)(\d+)/);
+
+    if (splitStr) {
+     let chapter = splitStr[1]; // "chapter"
+    let number = splitStr[2]; // "1" 
+    currnumber=number;
+    let Value=chapter+" "+number;
+    console.log(Value)
+    window.location.href = "DocTruyenPhong.html?data1=" + dataUrl + "&data2=" + Value + "&data3=" + dataname + "&data4=" + datanumberChap;
+    }
+    
+      });
+      var nextbutton = document.querySelector('.next-button');
+    var backbutton = document.querySelector('.back-button');
+    nextbutton.addEventListener('click', function() {
+     
+      let str = currchap;
+    let splitStr = str.replace(" ","").match(/([a-zA-Z]+)(\d+)/); // str : chapter 1
+
+    if (splitStr) {
+     let chapter = splitStr[1]; // "chapter"
+    var number = parseInt(splitStr[2]); // "1"
+    var realnumber = number+1; 
+    let Value =chapter+" "+realnumber;
+    console.log(number+1);
+ if(number<datanumberChap)  window.location.href = "DocTruyenPhong.html?data1=" + dataUrl + "&data2=Chapter " + realnumber + "&data3=" + dataname + "&data4=" + datanumberChap;
+    }
+     
+    })
+    backbutton.addEventListener('click', function() {
+     
+     let str = currchap;
+   let splitStr = str.replace(" ","").match(/([a-zA-Z]+)(\d+)/); // str : chapter 1
+
+   if (splitStr) {
+    let chapter = splitStr[1]; // "chapter"
+   let number = splitStr[2]; // "1" 
+   var realnumber = number-1; 
+   let Value =chapter+" "+realnumber;
+   console.log("here"+Value);
+if(number!=1)  window.location.href = "DocTruyenPhong.html?data1=" + dataUrl + "&data2=Chapter " + realnumber + "&data3=" + dataname + "&data4=" + datanumberChap;
+   }
+    
+   })
+     // for (var i = 0; i < imageMangas.length; i++) {
+            //   var img1 = document.createElement('img');
+            //   img1.src = imageMangas[i];
+            //   var li = document.createElement('li');
+            //   li.style.margin = '5px';
+            //   li.appendChild(img1);                  
+            //   TrangList.appendChild(li);
+            //   }
+            console.log(datanumberChap)
+            var Chapter = document.getElementById('Chapter');
+              Chapter.innerHTML = '';
+            for (var i = 1; i <= datanumberChap; i++) {
+              var option = document.createElement('option');
+              option.value = 'Chapter'+i; 
+              option.textContent = 'Chapter '+i;        
+              Chapter.appendChild(option);
+              console.log('okkkkklalala')
+              console.log("option"+currchap.replaceAll(" ",""))
+              Chapter.value=currchap.replaceAll(" ","")
+              }
+             
+// Đặt thuộc tính selected cho option
+              
+              // var ảnhLuot = document.getElementById('ảnhLuot');
+              //   var img2 = document.createElement('img2');
+              //   img2.src = imageMangas[0];
+              //   img2.style.marginLeft = '30px';
+              //   ảnhLuot.appendChild(img2);
+              //   var i = 0; 
+
+                function nextPage() {
+                  if (i < imageMangas.length - 1) {
+                    ảnhLuot.removeChild(ảnhLuot.firstChild);
+                    var img2 = document.createElement('img2');
+                    img2.src = imageMangas[++i];
+                    ảnhLuot.appendChild(img2);
+                  } else {
+                    alert("Hết trang");
+                  }
+                }
+
+                function previousPage() {
+                  if (i > 0) {
+                    ảnhLuot.removeChild(ảnhLuot.firstChild);
+                    var img2 = document.createElement('img2');
+                    img2.src = imageMangas[--i];
+                    ảnhLuot.appendChild(img2);
+                  } else {
+                    alert("Đây là trang đầu ");
+                  }
+                }
+            function showThang() {
+              var div = document.getElementById("TrangLuot");
+              div.style.display = "none";
+              var div = document.getElementById("TrangChuan");
+              div.style.display = "flex";
+            }   
+            function showLuot() {
+              var div = document.getElementById("TrangChuan");
+              div.style.display = "none";
+              var div = document.getElementById("TrangLuot");
+              div.style.display = "flex";
+            }   
+              function goToViewTruyen() 
+            { window.location = 'ViewTruyen.html'; }        
+            
+  </script>
+      <script>
+
+            
+          </script>
+</html>

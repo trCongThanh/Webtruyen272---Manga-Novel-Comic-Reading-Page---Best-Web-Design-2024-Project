@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="vi">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/homepage.css" />
+    <script src="js/search.js"></script>
+    <script src="js/testdb.js"></script>
+    <link rel="stylesheet" href="css/Account.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="js/testdb.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  </head>
+  <body>
+    <header>
+        <div class="icon">
+          <img src="img/Icon2.png" alt="icon" id="icon" width="120" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#" class="Home">Home</a></li>
+            <li><a href="#" class="Manga">Manga</a></li>
+            <li><a href="#" class="Novel">Novel</a></li>
+            <li><a href="#" class="Contact">Contact</a></li>
+            <li><a href="#" class="More">More</a></li>
+            <li class="search-bar-container">
+              <table class="search-bar-element">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="search"
+                      id="search"
+                      placeholder="Search"
+                    />
+                  </td>
+                  <td>
+                    <button class="material-symbols-outlined">search</button>
+                  </td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </nav>
+        <div class="avatar">
+            <img src="img/avatar.jpg" alt="icon" id="avatar" />
+            <p style="position: relative;;right: 100px;" id="user">Username</p>
+          </div>
+      </header>
+        <main style="display: flex;flex-direction: row;">
+          <div class="containPopup">
+    
+            <div id="popup" class="popup">
+                <div class="popup-content" style="margin-top: 120px;">
+                    <div class="popup-header">
+                        <h2 style="color: #000;">Choose your plan</h2>
+                        <span class="close-btn">&times;</span>
+                    </div>
+                    <div class="toggle-container">
+                        <input type="checkbox" id="billing-toggle">
+                        <label for="billing-toggle">Billed Yearly SAVE UP TO 40%</label>
+                    </div>
+                    <div class="plan-container">
+                        <div class="plan">
+                            <h3>Free Plan</h3>
+                            <p><strong>0 VND</strong> per user / month billed yearly</p><br>
+                            <button>Select</button>
+                            <hr>
+                            <p>All feature in free plan:</p>
+                           
+                                <p>⦿Read all free manga and novel <br>
+                                  ⦿Allow post 5 status to community <br>
+                                  ⦿Allow adding maximum 5 favourite manga/novel</p>
+                            <a href="#">See all features →</a>
+                        </div>
+                        <div class="plan">
+                            <h3>Premium Plan</h3>
+                            <p><strong>50,000 VND</strong> per user / month billed yearly</p><br>
+                            <button class="thanhtoan">Select</button>
+                            <hr>
+                            <p>Everything in Free plan, plus:</p>
+                                <p>⦿Read all premium manga and novel<br>
+                                  ⦿Allow post unlimited status to community 
+                                  <br>⦿Allow adding unlimited favourite manga/novel <br>
+                                  ⦿Allow using Audio feature in novel</p>
+                            
+                            <a href="#">See all features →</a>
+                        </div>
+                        <div class="plan">
+                            <h3>Custom Plan</h3>
+                            <p>Base on which feature you want</p><br>
+                            <button>Contact us</button>
+                            <hr>
+                            <p>Custom your own plan by contacting with us</p>
+                            <ul>
+                               
+                            </ul>
+                            <a href="#">See all features →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div class="card">
+                  <img class="background" src="img/witcher.jpg" alt="">
+          
+                  <div class="card-content">
+                    <div class="profile-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2">
+                        <line x1="6" x2="10" y1="11" y2="11" />
+                        <line x1="8" x2="8" y1="9" y2="13" />
+                        <line x1="15" x2="15.01" y1="12" y2="12" />
+                        <line x1="18" x2="18.01" y1="10" y2="10" />
+                        <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+                      </svg>
+                    </div>
+          
+                    <h3 class="title">The witcher</h3>
+                  </div>
+                  <div class="backdrop"></div>
+                </div>
+          
+                <div class="card">
+                  <img class="background" src="img/bo.jpg" alt="">
+          
+                  <div class="card-content">
+                    <div class="profile-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2">
+                        <line x1="6" x2="10" y1="11" y2="11" />
+                        <line x1="8" x2="8" y1="9" y2="13" />
+                        <line x1="15" x2="15.01" y1="12" y2="12" />
+                        <line x1="18" x2="18.01" y1="10" y2="10" />
+                        <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+                      </svg>
+                    </div>
+          
+                    <h3 class="title">Boruto</h3>
+                  </div>
+                  <div class="backdrop"></div>
+                </div>
+          
+                <div class="card">
+                  <img class="background" src="img/one.jpg" alt="">
+          
+                  <div class="card-content">
+                    <div class="profile-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2">
+                        <line x1="6" x2="10" y1="11" y2="11" />
+                        <line x1="8" x2="8" y1="9" y2="13" />
+                        <line x1="15" x2="15.01" y1="12" y2="12" />
+                        <line x1="18" x2="18.01" y1="10" y2="10" />
+                        <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+                      </svg>
+                    </div>
+          
+                    <h3 class="title">One piece</h3>
+                  </div>
+                  <div class="backdrop"></div>
+                </div>
+          
+                <div class="card">
+                  <img class="background" src="img/ble.webp" alt="">
+          
+                  <div class="card-content">
+                    <div class="profile-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2">
+                        <line x1="6" x2="10" y1="11" y2="11" />
+                        <line x1="8" x2="8" y1="9" y2="13" />
+                        <line x1="15" x2="15.01" y1="12" y2="12" />
+                        <line x1="18" x2="18.01" y1="10" y2="10" />
+                        <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+                      </svg>
+                    </div>
+          
+                    <h3 class="title">Bleach</h3>
+                  </div>
+                  <div class="backdrop"></div>
+                </div>
+          
+                <div class="card">
+                  <img class="background" src="img/sherlock.jpg" alt="">
+          
+                  <div class="card-content">
+                    <div class="profile-image">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad-2">
+                        <line x1="6" x2="10" y1="11" y2="11" />
+                        <line x1="8" x2="8" y1="9" y2="13" />
+                        <line x1="15" x2="15.01" y1="12" y2="12" />
+                        <line x1="18" x2="18.01" y1="10" y2="10" />
+                        <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+                      </svg>
+                    </div>
+          
+                    <h3 class="title">Sherlock Holmes</h3>
+                  </div>
+                  <div class="backdrop"></div>
+                </div>
+              </div>
+              <div style="width: 50%;display: flex;flex-direction: row;">
+                <div class="infor">
+                    <h1>INFORMATION</h1>
+                    <h2>Account</h2>
+                    <div class="infor-content">
+                        <p id="containUser">Username :</p>
+                        <p id="containGmail">Email : </p>
+                    </div>
+                    <div id="dropdown">
+                        <button class="dropdown-toggle">
+                          <span>Menu</span>
+                          <i class="fa-solid fa-caret-down"></i>
+                        </button>
+                  
+                        <ul class="menu">
+                          <li class="menu-item"><a href="#" class="upgradeBtn">Upgrade Account</a></li>                      
+                          <li class="menu-item"><a href="#">Favourite</a></li>
+                          <li class="menu-item dropdown">
+                            <a href="#" class="submenu-toggle">
+                              <span>More</span>
+                              <i class="fa-solid fa-caret-right"></i>
+                            </a>
+                            <ul class="submenu">
+                              <li class="submenu-item"><a href="#">Change password</a></li>
+                              <li class="submenu-item"><a href="#">Contact us</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="iconAvatar" style="width: 200px;margin-top: 30%;margin-bottom: 30%;">
+                    <img src="img/avatar.jpg" alt="icon" style="width: 170px;height:170px;margin: 10%;"/>
+                  </div>
+              </div>
+              
+        </main>
+        <div class="favour">
+          <h2>FAVOURITE</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(img/conan-movie-22.jpg);">
+                    <p class="sub-title">Gosho Aoyama</p>
+                    <h1 class="title">Conan</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://c4.wallpaperflare.com/wallpaper/524/305/319/detective-conan-manga-wallpaper-preview.jpg);">
+                    <div class="back-title">Conan</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Gosho Aoyama
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Comedy - Drama  - Mystery - Romance - School Life
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đang tiếp diễn
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+             
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://www.wallpaperflare.com/static/832/668/878/dragon-ball-z-anime-dragon-ball-wallpaper.jpg);">
+                    <p class="sub-title">Toriyama Akira</p>
+                    <h1 class="title">Dragon-Ball</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://i.pinimg.com/736x/85/4b/d0/854bd088302a0f565f61e980271263bf.jpg);">
+                    <div class="back-title">Dragon-Ball</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Toriyama Akira
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Action - Adventure - Comedy - Fantasy
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đã kết thúc
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://apicms.thestar.com.my/uploads/images/2023/09/20/2292513.jpg);">
+                    <p class="sub-title">Oda Eiichiro</p>
+                    <h1 class="title">One Piece</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/11/should-you-watch-one-piece.jpg);">
+                    <div class="back-title">One Piece</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Oda Eiichiro
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Action - Comedy - Fantasy
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đang tiếp diễn
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://i.pinimg.com/736x/55/9a/3a/559a3a8a2f3c7aa991ba8c0aac12ecd7.jpg);">
+                    <p class="sub-title">Kishimoto Masashi</p>
+                    <h1 class="title">Naruto</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://wallpapers.com/images/featured/naruto-shippuden-rxxyiybobk8m0q7u.jpg);">
+                    <div class="back-title">Naruto</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Kishimoto Masashi
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Action - Comedy - Fantasy
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đã kết thúc
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://wallpapercave.com/wp/wp3723783.jpg);">
+                    <p class="sub-title">Fujiko Fujio</p>
+                    <h1 class="title">Doraemon</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://www.scifijapan.com/images/Toho/doraemon2019-01.jpg);">
+                    <div class="back-title">Doraemon</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Fujiko Fujio
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Comedy - Adventure
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đang tiếp diễn
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a9649c8f-a63b-407f-8cf3-ce255eb1be86/d85a50a-7d9ff057-2406-4e3f-aebd-1e04e8a753b8.jpg/v1/fill/w_1024,h_576,q_75,strp/wallpaper__hibi_chouchou_by_panelletdelimon_d85a50a-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvYTk2NDljOGYtYTYzYi00MDdmLThjZjMtY2UyNTVlYjFiZTg2XC9kODVhNTBhLTdkOWZmMDU3LTI0MDYtNGUzZi1hZWJkLTFlMDRlOGE3NTNiOC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yYS-iU6loadLtl0NMyxP_1fhdjnKPXY39mAlEK7NMrs);">
+                    <p class="sub-title">Morishita Suu</p>
+                    <h1 class="title">Hibi Chouchou</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://lh4.googleusercontent.com/proxy/OtUCQjQKgi0wzEw3tex9fl6irUGCQtBxyoJEajM3_h0TzDz72P3CbewJ2wM59K4u1Xft5VRx0qDgcI9qoF9HbJQIZVZJ);">
+                    <div class="back-title">Hibi Chouchou</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Morishita Suu
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Comedy - Romance - School Life
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đã kết thúc
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://images8.alphacoders.com/108/1081458.jpg);">
+                    <p class="sub-title">Isayama Hajime</p>
+                    <h1 class="title">Attack On Titan</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://wallpapers-hub.art/wallpaper-images/36692.jpg);">
+                    <div class="back-title">Attack On Titan</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Isayama Hajime
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Action - Horror - Mystery
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đã kết thúc
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://wallpapers-clan.com/wp-content/uploads/2024/04/one-punch-man-saitama-epic-desktop-wallpaper-preview.jpg);">
+                    <p class="sub-title">Murata Yusuke</p>
+                    <h1 class="title">One punch man</h1>
+                    <p class="sub-title">Manga</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://wallpapersmug.com/large/ede890/chibi-one-punch-man-anime.jpg);">
+                    <div class="back-title">One punch man</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Murata Yusuke
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Action - Comedy
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đang tiếp diễn
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://wallpapers.com/images/hd/sherlock-holmes-graphic-game-avhle8hxv45y200n.jpg);">
+                    <p class="sub-title">Arthur Conan Doyle</p>
+                    <h1 class="title">The adventures of sherlock holmes</h1>
+                    <p class="sub-title">Novel</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://i.pinimg.com/736x/5e/05/f6/5e05f66a6633742f7b1a8fb751b82d47.jpg);">
+                    <div class="back-title">The adventures of sherlock holmes</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Arthur Conan Doyle
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Mystery - Adventure
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đã kết thúc
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" >
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://w0.peakpx.com/wallpaper/170/593/HD-wallpaper-harry-potter-harry-potter-and-the-philosopher-s-stone.jpg);">
+                    <p class="sub-title">J. K. Rowling</p>
+                    <h1 class="title">Harry potter and magic stone</h1>
+                    <p class="sub-title">Novel</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://w0.peakpx.com/wallpaper/694/941/HD-wallpaper-harry-potter-harry-potter-and-the-philosopher-s-stone.jpg);">
+                    <div class="back-title">Harry potter and magic stone</div>
+                    <div class="movie-description">
+                      <span>Author : </span>J. K. Rowling
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Adventure - Fantasy
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đã kết thúc
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="IT">
+                <div class="card2-content">
+                  <div class="card2-front" style="background-image: url(https://www.hometheaterforum.com/community/media/2017-it-poster.4691/full);">
+                    <p class="sub-title">Stephen King</p>
+                    <h1 class="title">IT</h1>
+                    <p class="sub-title">Novel</p>
+                  </div>
+          
+                  <div class="card2-back" style="background-image: url(https://i.ytimg.com/vi/BVhJYn8ElA0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD4XWtF8OdcQzhpsy3zfPgV9bTKvw);">
+                    <div class="back-title">IT</div>
+                    <div class="movie-description">
+                      <span>Author : </span>Stephen King
+                    </div>
+                    <div class="genre">
+                      <span>Genre: </span>Horror
+                    </div>
+                    <div class="release-date">
+                      <span>Status: </span>Đã kết thúc
+                    </div>
+                    <a href="#" class="btn">Read</a>
+                  </div>
+                </div>
+            </div>
+            </div>        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>   
+        </div>
+        </div>
+      <footer>
+        <div class="footerContainer">
+          <div class="Icon-socialNetWork">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="footer-nav">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Our Team</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footerBottom">
+          <p>
+            CopyRight &copy;2024;Designed by <span class="Designer">Team7</span>
+          </p>
+        </div>
+      </footer>
+  </body>
+  <style>
+    .containPopup {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f5f7fa;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        z-index: 1000;
+    }
+   .containPopup>button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #1a73e8;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+    }
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .popup-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 900px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+    .popup-header h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .close-btn {
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #aaa;
+    }
+    .close-btn:hover {
+        color: #000;
+    }
+    .toggle-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .toggle-container input {
+        display: none;
+     
+    }
+    .toggle-container label {
+        cursor: pointer;
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        background-color: #f5f7fa;
+        transition: background-color 0.3s;
+        color: black;
+    }
+    .toggle-container input:checked + label {
+        background-color: #1a73e8;
+        color: white;
+    }
+    .plan-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .plan {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        width: 30%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .plan h3 {
+        margin-top: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a73e8;
+    }
+    .plan p {
+        font-size: 16px;
+        margin: 10px 0;
+        color: #333;
+    }
+    .plan button {
+        margin-top: 20px;
+        background-color: #1a73e8;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .plan button:hover {
+        background-color: #1558b0;
+    }
+   
+    .plan p {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #555;
+        text-align: left;
+    }
+    .plan a {
+        text-decoration: none;
+        color: #1a73e8;
+        font-size: 14px;
+    }
+    .plan a:hover {
+        text-decoration: underline;
+    }
+    @media screen and (max-width: 768px) {
+.popup-content {
+    width: 90%;
+}
+}
+@media screen and (max-width: 768px) {
+.plan-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan {
+    width: 90%;
+    margin-bottom: 20px;
+}
+}
+
+@media screen and (max-width: 768px) {
+body {
+    font-size: 14px;
+}
+}
+</style>
+  <script>
+    var username =returnuser()
+    var gmail1 =returngmail()
+    
+    const usertxt = document.querySelector("#user");
+    usertxt.innerHTML=username
+    const cuser = document.querySelector("#containUser");
+    const cgmail = document.querySelector("#containGmail");
+    cuser.innerHTML='USERNAME: '+username
+    cgmail.innerHTML='EMAIL: '+gmail1
+    const cardsContainer = document.querySelector(".container");
+
+cardsContainer.addEventListener("click", (e) => {
+  const target = e.target.closest(".card");
+
+  if (!target) return;
+
+  cardsContainer.querySelectorAll(".card").forEach((card) => {
+    card.classList.remove("active");
+  });
+
+  target.classList.add("active");
+});
+const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+dropdownToggle.addEventListener("click", () => {
+  const dropdownMenu = document.querySelector("#dropdown > .menu");
+
+  dropdownMenu.classList.toggle("open");
+  dropdownToggle.classList.toggle("open");
+});
+  </script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var popup = document.getElementById('popup');
+        var upgradeBtn = document.querySelector('.upgradeBtn');
+        var closeBtn = document.getElementsByClassName('close-btn')[0];
+        document.querySelector('.thanhtoan').addEventListener('click',(e)=>{
+          window.location.href='thanhtoan.html';
+          console.log('ok11')
+        })
+        upgradeBtn.onclick = function() {
+            popup.style.display = "block";
+        }
+
+        closeBtn.onclick = function() {
+            popup.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+  </script>
+  
+</html> 

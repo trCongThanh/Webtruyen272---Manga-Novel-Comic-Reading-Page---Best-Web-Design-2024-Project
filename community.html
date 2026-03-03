@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng bài post</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-image: url('img/community3.gif');
+            background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-attachment: fixed;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .post-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #daeef2;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .imagepost {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="" alt="">
+        <h1 class="mb-4" style="color: rgb(34, 139, 214);font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Webtruyen272's Community</h1>
+
+        <!-- Button để mở pop-up -->
+        <div class="input-group input-group-sm mb-3">
+          <div style="background-image: url('chatbubble.png'); width: 50px;height: 40px;background-repeat: no-repeat;background-size: contain;"></div>
+            <input  data-toggle="modal" data-target="#postModal" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Have something to share ....">
+            <button style="width: 70px;height: 32px;" type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#postModal">
+               Post!!!
+            </button>
+        </div>
+          
+       
+
+        <!-- Modal (pop-up) -->
+        <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="postModalLabel">New Post</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="postForm">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="postContent">Content:</label>
+                                <textarea class="form-control" id="postContent" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="imageUpload">Choose image:</label>
+                                <input type="file" class="form-control-file" id="imageUpload">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                            <button type="submit" class="btn btn-primary">Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Khung hiển thị bài post -->
+        <div class="post-container" id="postContainer">
+            <!-- Đây là nơi hiển thị bài post sau khi đăng -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS và các script cần thiết -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript để xử lý sự kiện đăng bài
+        const postForm = document.getElementById('postForm');
+        const postContent = document.getElementById('postContent');
+        const postContainer = document.getElementById('postContainer');
+
+        postForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn form submit lại trang
+
+            const content = postContent.value.trim();
+            if (content === '') {
+                alert('Vui lòng nhập nội dung bài post!');
+                return;
+            }
+
+            const imageUpload = document.getElementById('imageUpload');
+            let imageUrl = '';
+            if (imageUpload.files.length > 0) {
+                const file = imageUpload.files[0];
+                imageUrl = URL.createObjectURL(file);
+            }
+            // ngày giờ post
+             var now = new Date();
+
+  // Get hours, minutes, day, month, year from the Date object
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var day = now.getDate();
+            var month = now.getMonth() + 1; // January is 0, so we add 1
+            var year = now.getFullYear();
+
+            // Format the date and time string
+            var formattedTime = hours + ':' + minutes + ' ' + day + '/' + month + '/' + year;
+
+            // Tạo một bài post mới
+            const postElement = document.createElement('div');
+            postElement.classList.add('post', 'card', 'mb-3');
+            postElement.innerHTML = `
+                <div class="card-body">
+                    <p class="card-text">${content}</p>
+                    <p class="card-text">${formattedTime}</p>
+                    ${imageUrl ? `<img class="imagepost" src="${imageUrl}" alt="Uploaded Image">` : ''}
+                </div>
+            `;
+
+            // Thêm bài post vào đầu khung hiển thị
+            postContainer.prepend(postElement);
+
+            // Đóng pop-up sau khi đăng bài
+            $('#postModal').modal('hide');
+
+            // Xóa nội dung trong ô nhập liệu và reset input file
+            postContent.value = '';
+            imageUpload.value = '';
+        });
+    </script>
+</body>
+</html>

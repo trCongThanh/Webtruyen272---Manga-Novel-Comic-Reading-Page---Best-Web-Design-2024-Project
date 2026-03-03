@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("../img/Wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.form-container,
+.map-container {
+  margin: auto;
+  position: absolute;
+  width: 80%; /* Increase the width as needed */
+  max-width: 600px; /* Increase the maximum width */
+  transition: all 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px; /* Increase the height as needed */
+  border: 0;
+  border-radius: 8px;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  height: 600px; /* Increase the height as needed */
+  opacity: 0;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%;
+  padding: 15px; /* Increase the padding as needed */
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.form-container textarea {
+  height: 120px; /* Increase the height as needed */
+  resize: none;
+  border-radius: 30px;
+}
+
+.form-container input[type="submit"] {
+  width: 100%;
+  padding: 15px; /* Increase the padding as needed */
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container input[type="submit"]:hover {
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.show-map .map-container {
+  left: 50%;
+  opacity: 1;
+  z-index: 1;
+}
+
+.show-map .form-container {
+  left: 150%;
+  opacity: 0;
+  z-index: 0;
+}
+
+.show-form .map-container {
+  left: -50%;
+  opacity: 0;
+  z-index: 0;
+}
+
+.show-form .form-container {
+  left: 50%;
+  opacity: 1;
+  z-index: 1;
+}
+
+.Button_change {
+  text-align: center;
+  margin: 20px 0;
+  margin-left: 900px;
+}
+#toggleBtn {
+  border-radius: 30px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#toggleBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .form-container,
+  .map-container {
+    width: 100%;
+    padding: 10px;
+    top: 60%;
+  }
+
+  .form-container {
+    height: auto;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .Button_change {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #toggleBtn {
+    margin: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container,
+  .map-container {
+    width: 100%;
+    padding: 10px;
+    top: 70%;
+  }
+
+  .form-container {
+    height: auto;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .Button_change {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #toggleBtn {
+    margin: auto;
+    display: block;
+  }
+}

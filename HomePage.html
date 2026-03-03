@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/search.css">
+    <script src="js/search.js"></script>
+    <script src="js/testdb.js"></script>
+    <script src="js/homepage.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  </head>
+  <body>
+    <header>
+      <div class="icon">
+        <img src="img/Icon2.png" alt="icon" width="10px" id="communityIcon" />
+      </div>
+      <div class="toggle-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="HomePage.html?home=home" class="Home">Home</a></li>
+          <li><a href="HomePage.html?home=manga" class="Manga">Manga</a></li>
+          <li><a href="HomePage.html?home=novel" class="Novel">Novel</a></li>
+          <li><a href="Contact.html" class="Contact">Contact</a></li>
+          <li><a href="HomePage.html?home=more" class="More">More</a></li>
+          <li class="search-bar-container">
+            <table class="search-bar-element">
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search"
+                  />
+                </td>
+                <td>
+                  <button class="material-symbols-outlined">search</button>
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li><a href="Login.html" class="button-sign-up">Sign up</a></li>
+          <li><a href="Login.html" class="button-login">Login</a></li>
+          <li><a href="Account.html"  class="avatar" ><img style="position: relative;right: 0px;width: 100px;height: 100px;" src="img/avatar.jpg" alt=""></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content-introduce-container">
+        <div style="color: black;" class="content-introduce-left" >
+          <h1 class="quotes1">Reading</h1>
+          <br />
+          <h2 class="quotes2">No Limit</h2>
+          <br />
+          <p class="quotes">
+            Reading is a conversation. All books talk. But a good book listens as well, invites you to engage with it, to share your thoughts and feelings. It’s a two-way exchange that enriches both the reader and the book itself, creating a bond that can last a lifetime
+          </p>
+          <br />
+          <br />
+          <a href="" class="Learn-more">Learn More</a>
+        </div>
+      </div>
+      <div class="Manga-category"><h2>Trending Manga</h2></div>
+      <div class="container">
+        <div class="row">
+        <div class="col-12 "><div class="mangaHomepage shadow"></div></div>
+        </div>
+      </div>
+      <br><br>
+      <div class="preManga-category"><h2>&ensp;&ensp;&ensp;Premium Manga</h2></div>
+      <div class="container">
+        <div class="row">
+        <div class="col-12 "><div class="premangaHomepage shadow">
+
+          <div style="margin-right: 30px;">
+            <div class="container1">
+              <img class="image" src="img/kaiju.jpg" style="width: 200px; height: 320px;">
+              <div class="star"><p style="font-size: 100px; color: rgb(255, 255, 255,0.5);bottom: 600px;">★</p></div>
+            </div>
+              <a class="premiumClickmanga" style="font-weight: bold; width: 180px; word-break: break-word; display: block; text-decoration: none; color: inherit;"><br>Kaijus no.8<br></a><a style="font-weight: normal;">Matsumoto Naoya</a></div>
+              
+              <div style="margin-right: 30px;">
+                <div class="container1">
+                <img class="image" src="img/sakamotoday.jfif" style="width: 200px; height: 320px;">
+                <div class="star"><p style="font-size: 100px; color: rgb(255, 255, 255,0.5);bottom: 600px;">★</p></div>
+              </div>
+                <a class="premiumClickmanga" style="font-weight: bold; width: 180px; word-break: break-word; display: block; text-decoration: none; color: inherit;"><br>Sakamoto Days<br></a><a style="font-weight: normal;">Suzuki Yuto</a></div>
+          
+              <div style="margin-right: 30px;">
+                <div class="container1">
+                <img class="image" src="img/jjk.jfif" style="width: 200px; height: 320px;">
+                <div class="star"><p style="font-size: 100px; color: rgb(255, 255, 255,0.5);bottom: 600px;">★</p></div>
+              </div>
+                <a class="premiumClickmanga" style="font-weight: bold; width: 180px; word-break: break-word; display: block; text-decoration: none; color: inherit;"><br>Jujustu Kaisen<br></a><a style="font-weight: normal;">Akutami Gege</a></div>
+        
+              </div></div>
+        </div>
+      </div>
+      <!-- <div class="box-container-manga">
+        <div class="box" id="Doraemon"></div>
+        <div class="box" id="Dragon-Ball"></div>
+        <div class="box" id="Naruto"></div>
+        <div class="box" id="One-Piece">></div>
+      </div>
+      <div class="box-container-content">
+        <div class="content-manga"><a href="">Doraemon</a></div>
+        <div class="content-manga"><a href="">Dragon Ball</a></div>
+        <div class="content-manga"><a href="">Naruto</a></div>
+        <div class="content-manga"><a href="">One piece</a></div>
+      </div>
+      <div class="box-container-manga-2">
+        <div class="box" id="Bleach"></div>
+        <div class="box" id="Fairy-Tail"></div>
+        <div class="box" id="One-punch-man"></div>
+        <div class="box" id="Atack-on-titan"></div>
+      </div>
+      <div class="box-container-content">
+        <div class="content-manga"><a href="">Bleach</a></div>
+        <div class="content-manga"><a href="">Fairy Tail</a></div>
+        <div class="content-manga"><a href="">One Punch Man</a></div>
+        <div class="content-manga"><a href="">Attack On Titan</a></div>
+      </div> -->
+      <div class="Novel-category"><h2>Trending Novel</h2></div>
+      <div class="col-12 "><div class="novelHomepage shadow"></div></div>
+      <br><br>
+      <div class="preNovel-category"><h2>&ensp;&ensp;&ensp;Premium Novel</h2></div>
+      <div class="col-12 "><div class="prenovelHomepage shadow">
+        <div style="margin-right: 30px;">
+          <div class="container1">
+          <img class="image" src="img/RichDadPoorDad.jpg" style="width: 200px; height: 320px;">
+          <div class="star"><p style="font-size: 100px; color: rgb(255, 255, 255,0.5);bottom: 600px;">★</p></div>
+              </div>
+          <a class="premiumClick" style="font-weight: bold; width: 180px; word-break: break-word; display: block; text-decoration: none; color: inherit;"><br>Rich Dad, Poor Dad<br></a><a style="font-weight: normal;">Robert Kiyosaki</a></div>
+              
+          <div style="margin-right: 30px;">
+            <div class="container1">
+            <img class="image" src="img/witcher.jpg" style="width: 200px; height: 320px;">
+            <div class="star"><p style="font-size: 100px; color: rgb(255, 255, 255,0.5);bottom: 600px;">★</p></div>
+              </div>
+            <a class="premiumClick" style="font-weight: bold; width: 180px; word-break: break-word; display: block; text-decoration: none; color: inherit;"><br>The Witcher<br></a><a style="font-weight: normal;">Andrzej Sapkowski</a></div>
+              
+            <div style="margin-right: 30px;">
+              <div class="container1">
+              <img class="image" src="img/TheGodfather.jpg" style="width: 200px; height: 320px;">
+              <div class="star"><p style="font-size: 100px; color: rgb(255, 255, 255,0.5);bottom: 600px;">★</p></div>
+              </div>
+              <a class="premiumClick" style="font-weight: bold; width: 180px; word-break: break-word; display: block; text-decoration: none; color: inherit;"><br>The Godfather<br></a><a style="font-weight: normal;">Mario Puzo</a></div>
+      
+      </div></div>
+      <!-- <div class="box-container-novel">
+        <div class="box" id="Harry-porter"></div>
+        <div class="box" id="the-witcher"></div>
+        <div class="box" id="Sherlock-Homes"></div>
+        <div class="box" id="Lord-of-the-ring"></div>
+      </div>
+      <div class="box-container-content">
+        <div class="content-manga"><a href="">Harry Porter</a></div>
+        <div class="content-manga"><a href="">The Witcher</a></div>
+        <div class="content-manga"><a href="">Sherlock Holmes</a></div>
+        <div class="content-manga"><a href="">The Lord Of The Ring</a></div>
+      </div>
+      <div class="box-container-novel2">
+        <div class="box" id="Rich-dad-poor-dad"></div>
+        <div class="box" id="the-good-father"></div>
+        <div class="box" id="les-misérables"></div>
+        <div class="box" id="the-Davinci-code"></div>
+      </div>
+      <div class="box-container-content">
+        <div class="content-manga"><a href="">Rich Dad, Poor Dad</a></div>
+        <div class="content-manga"><a href="">The Godfather</a></div>
+        <div class="content-manga"><a href="">Les Misérable</a></div>
+        <div class="content-manga"><a href="">The Davinci Code</a></div>
+      </div> -->
+      <div style="margin-bottom: 20px;"></div>
+      <div class="container">
+        <div class="row">
+        <div class="col-12"><div style="border:1px solid black; border-radius: 20px; margin-bottom: 20px;" class="newsupdate shadow"></div></div>
+        </div>
+      </div>
+
+      <section id="news-update">
+        <div class="news-update-heading">
+          <span>News Update</span>
+          <h3>News Update</h3>
+        </div>
+        <div class="news-update-container">
+          <div class="news-update-box">
+            <div class="news-update-img">
+              <img src="img/TheWitcherFilm.jpg" alt="News" />
+            </div>
+            <div class="news-update-text">
+              <span>27 July 2024</span>
+              <a href="" class="news-update-tittle">Live Action the Witcher</a>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repudiandae, nulla!
+              </p>
+              <a href="https://about.netflix.com/en/news/the-witcher-season-4-begins-production-in-the-uk-and-netflix-announces-fifth">Read More</a>
+            </div>
+          </div>
+
+          <div class="news-update-box">
+            <div class="news-update-img">
+              <img src="img/OnePieceFilms.jpg" alt="News" />
+            </div>
+            <div class="news-update-text">
+              <span>31 August 2024</span>
+              <a href="" class="news-update-tittle">Live Action One Piece</a>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repudiandae, nulla!
+              </p>
+              <a href="https://screenrant.com/how-many-one-piece-episodes-anime-netflix-season-1/">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+    </main>
+    <footer>
+      <div class="footerContainer">
+        <div class="Icon-socialNetWork">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-google-plus"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Our Team</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <p>
+          CopyRight &copy;2024;Designed by <span class="Designer">Team7</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+   
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log(window.User)
+            var home = document.querySelector('.Home');
+            var manga = document.querySelector('.Manga');
+            var novel = document.querySelector('.Novel');
+            var contact = document.querySelector('.Contact');
+            var more = document.querySelector('.More');
+
+            home.addEventListener('click', function(event) {
+                window.location.href = "HomePage.html?home=home";
+            });
+            manga.addEventListener('click', function(event) {
+                window.location.href = "HomePage.html?home=manga";
+            });
+            novel.addEventListener('click', function(event) {
+                window.location.href = "HomePage.html?home=novel";
+            });
+            contact.addEventListener('click', function(event) {
+                window.location.href = "HomePage.html?home=contact";
+            });
+            more.addEventListener('click', function(event) {
+                window.location.href = "HomePage.html?home=more";
+            });
+  const params = new URLSearchParams(window.location.search);
+  const data = params.get('home');
+  const uname = params.get('uname');
+  const gmail = params.get('gmail');
+  const pass = params.get('pass');
+  
+  if(data!=null) {sethomepage(data);}
+setuser(uname,gmail);
+
+      })
+</script>
+
+<script>
+  document.querySelector('.Learn-more').addEventListener('click',(e)=>{ 
+    console.log('nnnn')
+  setnoThanhToan();
+  console.log(thanhtoan);
+})
+</script>
+<style>
+   .container1 {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        overflow: hidden; /* Để giới hạn kích thước của hình ảnh */
+    }
+    
+    .container1>.image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.3s ease-in-out;
+    }
+    
+    .star {
+        display: flex; /* Sử dụng flexbox để căn giữa ngôi sao */
+        justify-content: center; /* Căn ngang giữa */
+        align-items: center; /* Căn dọc giữa */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    
+    .container1:hover .image {
+        filter: brightness(50%);
+    }
+    
+    .container1:hover .star {
+        opacity: 1;
+        filter: brightness(100%);
+    }
+</style>
+
+<script src="js/thanhtoan.js"> </script>
+  <script>
+    var arr12=[];
+  document
+  .querySelector(".premiumClick")
+  .addEventListener("click", (e)=> {
+    if(thanhtoan==='false') {
+      Swal.fire({
+                title: 'Oops !!!',
+                text: 'Sorry, but you need to upgrade your account',
+                icon: 'error', // Thay đổi loại thông báo tại đây
+                confirmButtonText: 'Ok'
+            });}
+  });
+  document
+  .querySelector(".premiumClickmanga")
+  .addEventListener("click", (e)=> {
+    if(thanhtoan==='false') {
+      Swal.fire({
+                title: 'Oops !!!',
+                text: 'Sorry, but you need to upgrade your account',
+                icon: 'error', // Thay đổi loại thông báo tại đây
+                confirmButtonText: 'Ok'
+            });
+          }
+          else {
+           
+            
+           
+            
+            var author = 'Matsumoto Naoya';
+            var type = 'Comedy - Action - Mystery'
+            var arr = 'Đang tiếp diễn'
+            var imgs = 'https://lh3.google.com/u/0/d/1AzTF8hJLeGL3-wCbxY2kX7ee9Bbx3ipA=k'
+            var summary = 'Kaijū 8-gō (Nhật: 怪獣8号 (Quái thú Bát hiệu), "Quái thú số 8") là loạt shōnen manga được sáng tác và minh họa bởi Matsumoto Naoya. Manga được đăng lần đầu trên tạp chí Shōnen Jump+ từ tháng 7 năm 2020, và sau đó được Shūeisha tổng hợp và phát hành thành 12 tập tankōbon tính đến tháng 4 năm 2024. Câu chuyện kể về Hibino Kafka, một thanh niên lao công làm việc cho công ty vệ sinh bị vô tình ăn phải kaiju và có được khả năng biến thành loài đó và Kafka phải học cách tận dụng sức mạnh của bản thân để cố gắng hết sức vượt qua kỳ thi cuối cũng như để thực hiện lời hứa mà anh đã hứa với một cô bạn từ thuở nhỏ.'
+            var chapersheet = "https://docs.google.com/spreadsheets/d/1BrJrsFTPvpVFKemk8GUxQ2ypHS7VKoG_pm5-NsRau5I/edit?gid=0#gid=0"
+            var category = 'manga'
+             var name ='Kaiju no.8'
+            
+            arr12.push(name);
+            arr12.push(author);arr12.push(type);arr12.push(status),arr12.push(imgs);;arr12.push(summary);
+            
+            window.location.replace("ViewTruyen.html?arrayData=" +arr12);
+            console.log(arr)
+          }
+  });
+  </script>
+</html>

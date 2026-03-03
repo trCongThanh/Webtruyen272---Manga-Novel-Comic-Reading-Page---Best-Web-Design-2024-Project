@@ -1,0 +1,636 @@
+/* General Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  display:flex;
+  flex-direction: row;
+}
+.imageComic{
+  width:300px; height:400px; margin-top: 120px;margin-bottom: 30px;margin-left: 80px;border-radius: 5px 5px 5px 5px;border: 1px solid black;
+}
+.infor{
+  width:520px;margin-top:100px;margin-left:50px;
+}
+.review{
+  width: 400px;background-color:#1C1C1C;height:650px;overflow-y: auto;flex-direction: row;margin-left: 100px;
+}
+#Menu{
+  display: flex; justify-content: space-around;
+}
+.divChapter{
+  background-color: #1C1C1C;
+}
+#Chapters{
+  background-color: #1C1C1C;width: 35%;height:440px;;overflow-y: auto;flex-direction: row;display:none;margin-left: 500px;
+}
+#imageList{
+  display: flex;flex-direction: column;background-color: #1C1C1C;
+}
+#Comments{
+  display:flex;flex-direction: row;display:none;background-color: #1C1C1C;
+}
+.cmtdiv{
+  background-color: #b1b1b16a;width: 40%;height: 480px;position: relative;margin-left:450px;
+}
+.inputCmt{
+  width: 80%;margin-top: 20px;margin-left: 80px;display:block;
+}
+#textarea{
+  margin-top: 30px;position: relative;;right: 40px;background-color: black;border-radius: 10px 10px 10px 10px;overflow-y: auto;
+}
+/* Base Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  overflow-y: scroll;
+}
+
+header {
+  height: 100px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  border: none;
+  background-color: white;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul li a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: rgb(47, 238, 255);
+  transition: all 0.5s;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+.button-sign-up, .button-login {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: white;
+}
+
+.search-bar-container {
+  margin: auto;
+  position: relative;
+  border: 2px solid;
+  padding: 0 10px;
+  border-radius: 50px;
+}
+
+.search-bar-element {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+#search {
+  border: none;
+  border-radius: 50px;
+  padding: 0px 5px;
+}
+
+#search:focus {
+  outline: none;
+}
+
+.Home, .Manga, .Novel, .Contact, .More {
+  padding: 15px 15px;
+}
+
+p {
+  color: rgba(18, 18, 18, 0.764);
+  font-size: 15px;
+  padding: 10px;
+}
+
+h2 {
+  color: rgba(0, 0, 0, 0.812);
+  font-size: 30px;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  justify-content: center;
+}
+
+#Menu {
+  list-style-type: none;
+  margin: 5px;
+  padding: 30px;
+  overflow: hidden;
+  background-image: url(../img/Sky.jpg);
+  background-repeat: no-repeat;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  padding: 36px;
+  transition: 0.5s;
+}
+
+li a:hover {
+  color: chocolate;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 8px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  cursor: default;
+}
+
+.swiper {
+  width: 370px;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.swiper-slide {
+  width: 350px;
+  margin: 0;
+}
+
+.card-content {
+  position: relative;
+  padding: 15rem 5rem;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.swiper-slide:hover .card-content {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: white;
+}
+
+.card-front {
+  background-color: rgba(255, 163, 42, 0.2);
+  align-items: center;
+}
+
+.card-front::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 3px solid yellow;
+  transform: translateZ(2rem);
+}
+
+.title {
+  font-family: "Teko", sans-serif;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  line-height: 120%;
+  transform: translateZ(4.4rem);
+}
+
+.sub-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  gap: 0.5rem;
+}
+
+.back-title {
+  font-family: "Teko", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: yellow;
+  text-transform: uppercase;
+  align-self: center;
+  transform: translateZ(2rem);
+}
+
+.card-back span {
+  font-weight: 600;
+  color: yellow;
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 2.2rem;
+  color: yellow;
+  border: 2px solid white;
+  border-radius: 100px;
+  text-align: center;
+  align-self: center;
+  margin-top: 1rem;
+  transform: translateZ(2rem);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(185, 164, 0);
+  color: white;
+  border: 2px solid rgb(185, 164, 0);
+}
+
+#myInputComment {
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  top: 28px;
+  left: 108px;
+  border: darkgrey;
+}
+
+#ButtonRead {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  background-color: rgb(255, 94, 0);
+  color: white;
+  cursor: pointer;
+}
+
+#ButtonReadNew {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  background-color: #1C1C1C;
+  color: orange;
+  cursor: pointer;
+}
+
+#ButtonFavor {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255, 0.881);
+  color: black;
+  cursor: pointer;
+}
+
+#ButtonRead:hover {
+  background-color: rgba(255, 128, 0, 0.953);
+}
+
+#ButtonSend {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  background-color: black;
+  color: chocolate;
+  cursor: pointer;
+}
+
+#ButtonIcon {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 15px 10px;
+  background-color: black;
+  color: chocolate;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../img/Sky.jpg);
+}
+
+label {
+  text-align: center;
+  display: block;
+  font-size: 25px;
+  padding: 10px;
+  color: black;
+  overflow: hidden;
+}
+
+label:hover {
+  color: chocolate;
+}
+
+#imageList li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid darkgrey;
+}
+
+#MangaList li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid darkgrey;
+}
+
+#MangaList img {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  object-fit: cover;
+}
+
+#imageList img {
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.Icon-socialNetWork {
+  display: flex;
+  justify-content: center;
+}
+
+.Icon-socialNetWork a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.Icon-socialNetWork a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+.Icon-socialNetWork a:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.Icon-socialNetWork a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footer-nav {
+  margin: 30px;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav ul li a {
+  color: white;
+  margin: 20px;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footer-nav ul li a:hover {
+  transition: 1;
+}
+
+.footerBottom {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1034px){
+  .review{
+    display:none;
+   }
+   #Chapters{
+    margin-left: 350px;
+  }
+  .inputCmt{
+    margin-left: 30px;
+  }
+  .cmtdiv{
+   margin-left:330px;
+  }
+  #myInputComment{
+    left:80px;
+  }
+  .Icon-socialNetWork a {
+    padding: 7px;
+    margin: 7px;
+    border-radius: 50%;
+  }
+  
+  .Icon-socialNetWork a i {
+    font-size: 0.5em;
+  }
+  .footer-nav ul li a {
+    margin: 10px;
+    font-size: 0.3em;
+  }
+  
+  .footerBottom {
+
+    padding: 10px;
+    
+  }
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+/* For tablets (portrait) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+  .cmtdiv{
+    margin-left:130px;
+    width:450px;
+
+   }
+   .inputCmt{
+    margin-left: 60px;
+  }
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul li a {
+    padding: 10px 0;
+  }
+
+  .search-bar-container {
+    width: 80%;
+    margin-top: 10px;
+  }
+#Chapters{
+  margin-left: 250px;
+}
+ 
+
+  .btn {
+    padding: 0.4rem 1.8rem;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 5px 0;
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 5px 0;
+  }
+  .cmtdiv{
+    margin-left:20px;
+    width:350px;
+
+   }
+   
+   .imageComic{
+    margin-left: 50px;
+   }
+   .inputCmt{
+    margin-left: 0px;
+  }
+  .responsive{
+    margin-top:100px;
+  }
+  .infor{
+    flex-direction: column;
+    width: 350px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul li a {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .button-sign-up, .button-login {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .search-bar-container {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-slide {
+    width: 95%;
+  }
+
+  .card-content {
+    padding: 8rem 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .sub-title {
+    font-size: 0.5rem;
+  }
+
+  .back-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.3rem 1.5rem;
+  }
+}

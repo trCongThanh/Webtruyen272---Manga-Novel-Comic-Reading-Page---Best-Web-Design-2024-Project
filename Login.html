@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styleLogin.css" />
+    <title>Ludiflex | Login & Registration</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="nav-logo">
+          <img src="img/Icon2.png" alt="img" />
+        </div>
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="#" class="link active">Home</a></li>
+            <li><a onclick="displayInfo()" href="#" class="link">Blog</a></li>
+            <li><a href="#" class="link">Services</a></li>
+            <li><a href="#" class="link">About</a></li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <button class="btn white-btn" id="loginBtn" onclick="login()">
+            Sign In
+          </button>
+          <button class="btn" id="registerBtn" onclick="register()">
+            Sign Up
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+      <!----------------------------- Form box ----------------------------------->
+      <div class="form-box">
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+          <div class="top">
+            <span
+              >Don't have an account?
+              <a href="#" onclick="register()">Sign Up</a></span
+            >
+            <span
+              >or you can use as guest
+              <a href="#" onclick="access()">access now</a></span
+            >
+            <header>Login</header>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              class="input-field ulogin"
+              placeholder="Username or Email"
+            />
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" class="input-field plogin" placeholder="Password" />
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input onclick="checkInfo()" type="submit" class="submit" value="Sign In" id="Sign_In" />
+          </div>
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="login-check" />
+              <label for="login-check"> Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="#">Forgot password?</a></label>
+            </div>
+          </div>
+        </div>
+
+          <!------------------- registration form -------------------------->
+          <div class="register-container" id="register">
+            <div class="top">
+              <span
+                >Have an account? <a href="#" onclick="login()">Login</a></span
+              >
+              <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+              <div class="input-box">
+                <input style="width: 500px;" type="text" class="input-field username" placeholder="Username" />
+                <i class="bx bx-user"></i>
+              </div>
+            </div>
+            <div class="input-box">
+              <input type="text" class="input-field gmail" placeholder="Email" />
+              <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" class="input-field password" placeholder="Password" />
+              <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+              <input onclick="saveInfo()" type="submit" class="submit" value="Register" />
+            </div>
+            <div class="two-col">
+              <div class="one">
+                <input type="checkbox" id="register-check" />
+                <label for="register-check"> Remember Me</label>
+              </div>
+              <div class="two">
+                <label><a href="#">Terms & conditions</a></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script>
+      function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+
+        if (i.className === "nav-menu") {
+          i.className += " responsive";
+        } else {
+          i.className = "nav-menu";
+        }
+      }
+    </script>
+
+    <script>
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+
+      function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+        
+      }
+
+      function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+       
+      }
+      let infoArray = [];
+      window.userarr =[];
+      
+        function saveInfo() {
+            
+
+            let name = document.querySelector(".username").value;
+            let gmail = document.querySelector(".gmail").value;
+            let password = document.querySelector(".password").value;
+
+            let storedArray = JSON.parse(localStorage.getItem("infotruyen"));
+            if (storedArray) {
+                infoArray = storedArray;
+            }
+
+            for (let i = 0; i < infoArray.length; i++) {
+                if(infoArray[i].name===name.value||infoArray[i].gmail===gmail.value) {alert("This username or gmail already existed");return;}
+              }
+
+            let info = {
+                name: name,
+                gmail : gmail,
+                password : password,
+            };
+
+            infoArray.push(info);
+            localStorage.setItem("infotruyen", JSON.stringify(infoArray));
+           login()
+        }
+        function access(username,gmail,pass)
+        {
+          window.location.href="Homepage.html?uname="+username+"&gmail="+gmail+"&pass="+pass;
+        }
+        function checkInfo() {
+          console.log(infoArray)
+            let storedArray = JSON.parse(localStorage.getItem("infotruyen"));
+            if (storedArray) {
+                infoArray = storedArray;
+            }
+
+            var ulogin = document.querySelector('.ulogin')
+            var plogin = document.querySelector('.plogin')
+
+            for (let i = 0; i < infoArray.length; i++) {
+                if((infoArray[i].name===ulogin.value||infoArray[i].gmail===ulogin.value) && infoArray[i].password===plogin.value) {localStorage.removeItem('GLOBAL_VARIABLE_KEY');alert("Login successful");access(infoArray[i].name,infoArray[i].gmail,infoArray[i].password);console.log(userarr);return}
+                else {alert("Email or password is incorrect !");}
+              }
+        }
+        // Xóa một thông tin cụ thể
+        function removeInfo(index) {
+        let storedArray = JSON.parse(localStorage.getItem("infotruyen"));
+        if (storedArray) {
+        storedArray.splice(index, 1);
+        localStorage.setItem("infotruyen", JSON.stringify(storedArray));
+        displayInfo();
+            }
+        }
+        // Xóa toàn bộ thông tin
+        function clearInfo() {
+        localStorage.removeItem("infotruyen");
+        infoArray = [];
+        displayInfo();
+        }
+        function displayInfo() {
+            let storedArray = JSON.parse(localStorage.getItem("infotruyen"));
+            if (storedArray) {
+                infoArray = storedArray;
+            }
+
+            for (let i = 0; i < infoArray.length; i++) {
+               console.log(infoArray[i].name+" "+infoArray[i].password)
+              }
+        }
+    </script>
+  </body>
+</html>

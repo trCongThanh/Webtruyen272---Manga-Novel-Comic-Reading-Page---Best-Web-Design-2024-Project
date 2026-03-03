@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/View.css">
+<link rel="stylesheet" href="css/homepage.css">
+<script src="js/search.js"></script>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+<html>
+    <head>
+        <title>
+            Đọc Truyện Tranh Online- 
+        </title>
+    </head>
+    <body>
+      <header>
+        <div class="icon">
+          <img src="img/Icon2.png" alt="icon" width="120" />
+        </div>
+        <div class="toggle-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="HomePage.html?home=home" class="Home">Home</a></li>
+            <li><a href="HomePage.html?home=manga" class="Manga">Manga</a></li>
+            <li><a href="HomePage.html?home=novel" class="Novel">Novel</a></li>
+            <li><a href="Contact.html" class="Contact">Contact</a></li>
+            <li><a href="HomePage.html?home=more" class="More">More</a></li>
+            <li class="search-bar-container">
+              <table class="search-bar-element">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      name="search"
+                      id="search"
+                      placeholder="Search"
+                    />
+                  </td>
+                  <td>
+                    <button class="material-symbols-outlined">search</button>
+                  </td>
+                </tr>
+              </table>
+            </li>
+            <li><a href="Login.html" class="button-sign-up">Sign up</a></li>
+            <li><a href="Login.html" class="button-login">Login</a></li>
+            <li><a href="Account.html"  class="avatar" ><img style="position: relative;right: 0px;width: 100px;height: 100px;" src="img/avatar.jpg" alt=""></a></li>
+          </ul>
+        </nav>
+      </header>
+                  <!-- Comic Information -->
+          <div class="container">
+            <!-- Image Comic -->
+              <div>
+                  <img class="imageComic" id="myImg" alt="comicImage">
+              </div>
+            <!-- Information -->
+              <div class="infor" >
+                <h2 id="name"> Comic Name</h2>
+                <p id="author">Author :  Author name</p>
+                <p id="type">Genre : ...</p>
+                <p id="status">Rank : ...+</p>
+                <p>Source by : Dev Lord team</p>
+                <p id="summary">Describe : ...</p>
+                
+                <button type="button" style="width: 25%;" id="ButtonRead" onclick="goToDocTruyen()">Read Now</button>
+                
+                <button type="button" style="width: 30%;" id="ButtonReadNew" onclick="goTonewTruyen()">Newest Chapter</button>
+                
+                <button type="button" style="width: 25%;" id="ButtonFavor">+ ReadList</button>
+              </div>
+              <!-- Review div -->
+              <div class="review">
+                <div>
+                  <h2 style="color:white;font-size: 16px;"><center>Hot search this weak</center></h2>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                  <div class="swiper-slide" id="Conan"></div>
+                  <div class="swiper-slide" id="Dragon-Ball"></div>
+                  <div class="swiper-slide" id="One Piece"></div>
+                  <div class="swiper-slide" id="Naruto"></div>
+                  <div class="swiper-slide" id="Doraemon"></div>
+                  <div class="swiper-slide" id="Hibi Chouchou"></div>
+                  <div class="swiper-slide" id="Attack On Titan"></div>
+                  <div class="swiper-slide" id="One punch man"></div>
+                  <div class="swiper-slide" id="the adventures of sherlock holmes"></div>
+                  <div class="swiper-slide" id="harry potter and magic stone"></div>
+                  <div class="swiper-slide" id="IT"></div>
+                  </div>        
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>   
+              </div>
+              </div>
+          </div> 
+                    <!-- Menu Chap và Comment -->
+          <ul id="Menu">
+            <li><a href="#Chapters" onclick="showChapters()">Chapters</a></li>
+            <li><a href="#Comments" onclick="showComments()">Comments</a></li>
+          </ul>
+          <div class="divChapter">
+                <!-- Chapters div -->
+                <div id="Chapters">
+                  <div>
+                    <ul id="imageList"></ul>
+                  </div>
+            </div>
+          </div>
+
+          <div id="Comments">
+            <!-- Comments div -->
+              <div class="cmtdiv">
+                <br>
+                  <div class="inputCmt">
+                    <button type="button" style="width: 10%;" type="button" id="ButtonIcon"><i class="fa fa-comments"></i></button>
+                    <form action="/send" method="get">
+                      <input style="width: 60%;" type="text" id="myInputComment" name="comment" placeholder="Nhập bình luận...">
+                      <button type="button" style="width: 10%;"  id="ButtonSend"><i class="fa fa-send"></i></button>
+                    </form>
+                    <br>
+                    <textarea id="textarea" disabled rows="24" cols="55" style="color: aliceblue;"></textarea>
+                  </div>
+                <br>
+              </div>
+        </div>
+        
+        <footer>
+          <div class="footerContainer">
+            <div class="Icon-socialNetWork">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-google-plus"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footer-nav">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Our Team</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footerBottom">
+            <p>
+              CopyRight &copy;2024;Designed by <span class="Designer">Team7</span>
+            </p>
+          </div>
+        </footer>
+    </body>
+    <script>
+              var chapersheet;
+              var name;
+             // Gọi hàm getinfomanga() khi tất cả nội dung của trang đã được tải
+             document.addEventListener("DOMContentLoaded", function() {
+                    var queryString = window.location.search;
+                    var urlParams = new URLSearchParams(queryString);
+                    var arrayData = urlParams.get('arrayData');
+        
+        // Chuyển đổi chuỗi thành mảng, sử dụng dấu phẩy để phân tách
+                    var arr = arrayData.split(',');
+                    const data1 = arr[0]; name=data1;
+                    const data2 = arr[1];
+                    const data3 = arr[2];
+                    const data4 = arr[3];
+                    const data5 = arr[4];
+                    const data6 = arr[7]; chapersheet=data6;
+                    const data7 = arr[5]+arr[6];
+                    console.log("it is"+ arr[6])
+                    // array5 quá dài nên đè sang arr6
+                    if(data1!=null){
+                    getinfomanga(data1, data2,data3,data4,data5,data6,data7);} 
+                });
+
+                var MangaList = document.getElementById('MangaList');
+                  MangaList.innerHTML = '';
+                for (var i = 0; i < imageMangas.length; i++) {
+                  var img = document.createElement('img');
+                  img.src = imageMangas[i];
+                  var li = document.createElement('li');
+                  li.style.margin = '5px';
+                  li.appendChild(img);
+                  var a = document.createElement('a');
+                  a.href = '#' + NameManga[i];
+                  a.textContent = NameManga[i];
+                  
+                  a.style.color='white';
+                  li.appendChild(a);
+                  
+                  MangaList.appendChild(li);
+                  }
+                function showChapters() {
+                  var div = document.getElementById("Comments");
+                  div.style.display = "none";
+                  var div = document.getElementById("Chapters");
+                  div.style.display = "flex";
+                }   
+                function showComments() {
+                  var div = document.getElementById("Chapters");
+                  div.style.display = "none";
+                  var div = document.getElementById("Comments");
+                  div.style.display = "flex";
+
+                  const inputComment = document.getElementById("myInputComment");
+    const sendButton = document.getElementById("ButtonSend");
+    const textarea = document.getElementById("textarea");
+
+    // Thêm sự kiện click cho nút "Send"
+    sendButton.addEventListener("click", function() {
+        // Lấy giá trị từ input comment
+        const comment = inputComment.value;
+
+        // Nếu có nội dung trong comment
+        if (comment.trim() !== "") {
+            // Tạo thời gian hiện tại
+            const currentTime = new Date();
+            // Tạo chuỗi định dạng giờ phút
+            const formattedTime = currentTime.getHours() + ":" + currentTime.getMinutes();
+            // Tạo chuỗi cho bình luận và thêm vào textarea
+            const commentText =  "Bro: "+ comment + " - " +formattedTime +"\n";
+            textarea.value += commentText;
+
+            // Xóa nội dung trong input comment
+            inputComment.value = "";
+
+            // Tự động cuộn xuống cuối textarea
+            textarea.scrollTop = textarea.scrollHeight;
+        }
+    });
+                }   
+                function goToDocTruyen() 
+                { 
+                  console.log("sharrva"+returnshareVar());
+                  alert("hi")
+                  window.location.href = "DocTruyenPhong.html?data1=" + chapersheet + "&data2=Chapter 1" +"" + "&data3=" + name + "&data4=" + returnshareVar();
+                 }
+                 function goTonewTruyen() 
+                { 
+                  window.location.href = "DocTruyenPhong.html?data1=" + chapersheet + "&data2=Chapter " +returnshareVar()+ "&data3=" + name + "&data4=" + returnshareVar();
+                 }
+                 document.addEventListener("DOMContentLoaded", function() {
+});
+  // Lấy ra các phần tử cần thiết từ DOM
+  
+    </script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+    </script>
+      <script src="js/view.js"></script>
+        <script src="js/testdb.js"></script>
+</html>
